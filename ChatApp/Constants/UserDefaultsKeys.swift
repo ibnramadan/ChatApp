@@ -9,8 +9,5 @@ import Foundation
 
 enum UserDefaultsKeys {
     static let savedLoginData = "savedLoginData"
-    static let fireBaseToken = "fireBaseToken"
-    static let introScreen = "introScreen"
-    static let guestLogged = "guestLogged"
 }
 

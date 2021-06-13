@@ -15,7 +15,7 @@ protocol MyFriendsView: AnyObject {
     func fetchNewRows(newAvailableIndexes: [Int])
     func showError(error: String)
     func selectFriendSuccesfully(friend :friend)
-
+    
 }
 
 protocol  UserCellView {
@@ -46,7 +46,7 @@ class MyFriendsPresenter {
         usersProvider.resetORbegin()
         view?.fetchingDataSuccess()
     }
-
+    
     
     func getUsersCount() -> Int {
         
@@ -66,11 +66,11 @@ class MyFriendsPresenter {
         if let image = object?.img {
             cell.displayUserImage(URL: image)
         }
-       
+        
         cell.setBtnTitle(title : "Start Chat")
     }
     
- 
+    
     func didSelectRow(for index: Int) {
         let myId = LoginData.loadSavedLoginData()?.user?.id
         let friendId = usersProvider.elements[index].friend?.id
@@ -79,7 +79,7 @@ class MyFriendsPresenter {
         let object = (myId == friendId) ?  user : friend
         
         self.view?.selectFriendSuccesfully(friend : object!)
-    
+        
     }
     
 }
@@ -98,13 +98,13 @@ extension MyFriendsPresenter : PaginationDelegate  {
     
     func didEndLoadingContents(newAvailableIndexes: [Int]) {
         view?.fetchNewRows(newAvailableIndexes:newAvailableIndexes)
-   
+        
     }
     
     func diplayErrorForFirstPage(error: Error) {
         view?.showError(error: error.localizedDescription)
     }
- 
+    
 }
 
 

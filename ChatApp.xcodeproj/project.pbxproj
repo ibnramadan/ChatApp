@@ -28,7 +28,6 @@
 		E2711FC3267435DE00440407 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2711FC2267435DE00440407 /* UIImageView.swift */; };
 		E2711FC52674364B00440407 /* HomeViewController+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2711FC42674364B00440407 /* HomeViewController+PresenterDelegate.swift */; };
 		E2752EE2267513A100FA14A6 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2752EE1267513A100FA14A6 /* UIApplication.swift */; };
-		E2752EE426753FCB00FA14A6 /* ServerResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2752EE326753FCB00FA14A6 /* ServerResponce.swift */; };
 		E27DD1C826761F800033CA4D /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27DD1C726761F800033CA4D /* Chat.storyboard */; };
 		E27DD1CE267620B80033CA4D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27DD1CD267620B80033CA4D /* ChatViewController.swift */; };
 		E27DD1D12676215C0033CA4D /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27DD1D02676215C0033CA4D /* SenderCell.swift */; };
@@ -71,7 +70,6 @@
 		E2DEA9DD2673E3B1001BB81B /* AuthenticationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEA9DC2673E3B1001BB81B /* AuthenticationRouter.swift */; };
 		E2DEA9E32673EE62001BB81B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEA9E22673EE62001BB81B /* HomeViewController.swift */; };
 		E2DEA9E526740568001BB81B /* SocketManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEA9E426740568001BB81B /* SocketManger.swift */; };
-		E2DEA9E726740AC7001BB81B /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DEA9E626740AC7001BB81B /* Notifications.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +123,6 @@
 		E2711FC2267435DE00440407 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		E2711FC42674364B00440407 /* HomeViewController+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		E2752EE1267513A100FA14A6 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
-		E2752EE326753FCB00FA14A6 /* ServerResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponce.swift; sourceTree = "<group>"; };
 		E27DD1C726761F800033CA4D /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		E27DD1CD267620B80033CA4D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E27DD1D02676215C0033CA4D /* SenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
@@ -168,7 +165,6 @@
 		E2DEA9DC2673E3B1001BB81B /* AuthenticationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRouter.swift; sourceTree = "<group>"; };
 		E2DEA9E22673EE62001BB81B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E2DEA9E426740568001BB81B /* SocketManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManger.swift; sourceTree = "<group>"; };
-		E2DEA9E626740AC7001BB81B /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +248,6 @@
 				E2DEA9A326737F7B001BB81B /* Configuration */,
 				E2DEA9A226737F73001BB81B /* Core */,
 				E2DEA9A126737F5F001BB81B /* Resources */,
-				E2DEA9A026737F56001BB81B /* Helper */,
 				E2DEA99F26737F4F001BB81B /* Utilites */,
 				E2DEA99E26737F49001BB81B /* Model */,
 				E2DEA99D26737F3A001BB81B /* NetworkLayer */,
@@ -407,7 +402,6 @@
 		E2DEA99D26737F3A001BB81B /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E2DEA9D92673E384001BB81B /* Authentication */,
 				E2DEA9A426739274001BB81B /* Pagination */,
 				E2DEA9BB2673945B001BB81B /* ResponseArrayPaginatable.swift */,
 				E2DEA9E426740568001BB81B /* SocketManger.swift */,
@@ -429,13 +423,6 @@
 				E2DEA9BD26739484001BB81B /* Storyboard.swift */,
 			);
 			path = Utilites;
-			sourceTree = "<group>";
-		};
-		E2DEA9A026737F56001BB81B /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
 			sourceTree = "<group>";
 		};
 		E2DEA9A126737F5F001BB81B /* Resources */ = {
@@ -493,7 +480,6 @@
 				E2DEA9B92673944A001BB81B /* PaginationError.swift */,
 				E2DEA9C8267396DE001BB81B /* friend.swift */,
 				E2711FC02674329100440407 /* links.swift */,
-				E2752EE326753FCB00FA14A6 /* ServerResponce.swift */,
 				E27DD1DC267626B10033CA4D /* chatMessage.swift */,
 				E27DD1FA2676688A0033CA4D /* GetMyFriendModel.swift */,
 			);
@@ -507,7 +493,6 @@
 				E2DEA9C2267394FA001BB81B /* UIView+CornerRadius.swift */,
 				E2DEA9C426739519001BB81B /* UIView+Circle.swift */,
 				E2DEA9C62673952A001BB81B /* UIViewController.swift */,
-				E2DEA9E626740AC7001BB81B /* Notifications.swift */,
 				E2711FC2267435DE00440407 /* UIImageView.swift */,
 				E2752EE1267513A100FA14A6 /* UIApplication.swift */,
 			);
@@ -548,13 +533,6 @@
 				E2DEA9DC2673E3B1001BB81B /* AuthenticationRouter.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		E2DEA9D92673E384001BB81B /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Authentication;
 			sourceTree = "<group>";
 		};
 		E2DEA9DE2673EE0C001BB81B /* Home */ = {
@@ -853,7 +831,6 @@
 				E27DD1D3267621690033CA4D /* ReciveCell.swift in Sources */,
 				E2711FBF2674306D00440407 /* HomeRouter.swift in Sources */,
 				E2DEA9C72673952A001BB81B /* UIViewController.swift in Sources */,
-				E2DEA9E726740AC7001BB81B /* Notifications.swift in Sources */,
 				E2DEA9BE26739484001BB81B /* Storyboard.swift in Sources */,
 				E27DD1ED267632DE0033CA4D /* MyFriendsPresenter.swift in Sources */,
 				E27DD1DD267626B10033CA4D /* chatMessage.swift in Sources */,
@@ -865,7 +842,6 @@
 				E2DEA9B4267393E2001BB81B /* LoginData.swift in Sources */,
 				E27DD1E92676326E0033CA4D /* MyFriendsViewController+tableView.swift in Sources */,
 				E2711FC52674364B00440407 /* HomeViewController+PresenterDelegate.swift in Sources */,
-				E2752EE426753FCB00FA14A6 /* ServerResponce.swift in Sources */,
 				E27DD1CE267620B80033CA4D /* ChatViewController.swift in Sources */,
 				E27DD1F9267647D30033CA4D /* ChatViewController+PresenterDelegate.swift in Sources */,
 				E27DD1F32676334C0033CA4D /* MyFriendsRouter.swift in Sources */,

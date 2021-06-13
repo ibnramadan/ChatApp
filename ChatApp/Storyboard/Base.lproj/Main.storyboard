@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Aei-zN-eVR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CWr-rM-mdD">
+                                <rect key="frame" x="16" y="60" width="382" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CWr-rM-mdD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dkb-6i-RGF"/>
+                            <constraint firstItem="CWr-rM-mdD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="GZ3-I3-DiZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CWr-rM-mdD" secondAttribute="bottom" constant="16" id="HtS-Z0-dUZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CWr-rM-mdD" secondAttribute="trailing" constant="16" id="K2j-cj-HLS"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="uWU-rK-teu"/>
+                    <connections>
+                        <outlet property="tableView" destination="CWr-rM-mdD" id="LeQ-BO-wOb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-807" y="883"/>
+        </scene>
+        <!--Friends-->
+        <scene sceneID="iWB-aF-ZhK">
+            <objects>
+                <viewController id="EdL-nO-6Ev" customClass="MyFriendsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zSl-ac-trO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ofF-rM-NKa">
+                                <rect key="frame" x="16" y="60" width="382" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UfJ-aO-wgG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ofF-rM-NKa" firstAttribute="top" secondItem="UfJ-aO-wgG" secondAttribute="top" constant="16" id="Qhh-ob-ABj"/>
+                            <constraint firstItem="UfJ-aO-wgG" firstAttribute="bottom" secondItem="ofF-rM-NKa" secondAttribute="bottom" constant="16" id="fHe-N1-8iD"/>
+                            <constraint firstItem="ofF-rM-NKa" firstAttribute="leading" secondItem="zSl-ac-trO" secondAttribute="leading" constant="16" id="lMZ-Pc-tVI"/>
+                            <constraint firstItem="UfJ-aO-wgG" firstAttribute="trailing" secondItem="ofF-rM-NKa" secondAttribute="trailing" constant="16" id="mbR-mN-Ahs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.2.fill" catalog="system" id="R2n-cz-iCV"/>
+                    <connections>
+                        <outlet property="tableView" destination="ofF-rM-NKa" id="OFq-Dg-DUw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yIp-Gh-nRY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="883"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="iDj-SN-Ycm">
+            <objects>
+                <viewController id="Sm3-GA-Cjq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EhL-8p-V1s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cwy-IJ-Ku3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.badge.fill" catalog="system" id="pwX-Fd-AUk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dan-ei-pwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1141" y="857"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="3V4-su-qWw">
+            <objects>
+                <viewController id="Ysu-7Y-RKu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d5S-Gh-DMN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bMi-ew-B6O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="Db0-jh-VjS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUe-oZ-7eu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2071" y="846"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MTR-OJ-cUw">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Aei-zN-eVR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pMp-JX-inZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ExV-kb-FVN"/>
+                        <segue destination="EdL-nO-6Ev" kind="relationship" relationship="viewControllers" id="T7r-DO-OUN"/>
+                        <segue destination="Sm3-GA-Cjq" kind="relationship" relationship="viewControllers" id="WyZ-mR-E5y"/>
+                        <segue destination="Ysu-7Y-RKu" kind="relationship" relationship="viewControllers" id="u14-JQ-r6D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbx-KN-4Vf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell.badge.fill" catalog="system" width="128" height="128"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

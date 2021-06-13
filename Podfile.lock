@@ -1,16 +1,44 @@
 PODS:
   - Alamofire (5.4.3)
+  - Kingfisher (6.3.0)
+  - KRActivityIndicatorView (3.0.7)
+  - KRProgressHUD (3.4.7):
+    - KRActivityIndicatorView (= 3.0.7)
+  - ObjectMapper (4.2.0)
+  - Socket.IO-Client-Swift (16.0.1):
+    - Starscream (~> 4.0)
+  - Starscream (4.0.4)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher
+  - KRProgressHUD
+  - ObjectMapper
+  - Socket.IO-Client-Swift
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Kingfisher
+    - KRActivityIndicatorView
+    - KRProgressHUD
+    - ObjectMapper
+    - Socket.IO-Client-Swift
+    - Starscream
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
+  KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Socket.IO-Client-Swift: c116d6dc9fd6be9c259bacfe143f8725bce7d79e
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 380a89f248c20535c21f523d648c96d79171f9a8
+PODFILE CHECKSUM: 494e53367ae84c95d15b98c7247de759e17ed102
 
 COCOAPODS: 1.10.1

@@ -17,8 +17,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        self.decideNavigationPath()
     }
-
+    private func decideNavigationPath() {
+       
+        
+        switch LoginData.loadSavedLoginData() {
+        case .none:
+            openLoginScreen()
+        case .some(_):
+            openHomeScreen()
+        }
+    }
+    private func openHomeScreen() {
+        let tabBar = Storyboard.Main.instantiateInitialViewController()
+      //  let vc = Storyboard.Main.instantiate(HomeViewController.self)
+        let nav = UINavigationController(rootViewController: tabBar)
+        nav.navigationBar.isHidden = true
+        self.window?.rootViewController = nav
+    }
+    private func openLoginScreen() {
+        let vc = Storyboard.Authentication.instantiate(LoginViewController.self)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.navigationBar.isHidden = true
+        self.window?.rootViewController = nav
+       
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

@@ -26,6 +26,11 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter.willDisplayItemAt(for: indexPath.row)
+       }
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         let alertController = UIAlertController(title: "Add Friend", message: "Are you sure you want to add this friend", preferredStyle: .alert)

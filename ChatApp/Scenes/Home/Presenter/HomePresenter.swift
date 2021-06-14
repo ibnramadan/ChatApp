@@ -55,7 +55,9 @@ class HomePresenter {
         cell.setBtnTitle(title : "Add Friend")
    
     }
-    
+    func willDisplayItemAt(for index: Int) {
+        usersProvider.willDisplayItemAt(index: index)
+    }
  
     func didSelectRow(for index: Int) {
         

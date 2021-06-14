@@ -51,7 +51,7 @@ class PaginationProvider<T: BaseMappable> : NSCopying {
     
     private func shouldLoadNextPage() -> Bool {
         guard indexOfLastItemDisplayed >= elements.count - 1 - marginBeforeLoadNextPage else { return false }
-        guard lastPageResponse?.page  == lastPageResponse?.pageCount,
+        guard lastPageResponse?.page  != lastPageResponse?.pageCount,
             let currentPage = lastPageResponse?.page,
             !pagesLoadingInProgress.contains(currentPage + 1) else { return false }
         return true
@@ -68,6 +68,7 @@ class PaginationProvider<T: BaseMappable> : NSCopying {
             self.lastPageResponse = response
             let firstIndex = self.elements.count
             self.elements.append(contentsOf: response?.data ?? [])
+            print(response?.data ?? [])
             self.elements.reverse()
             let endIndex = self.elements.count
             self.delegate?.didEndLoadingContents(newAvailableIndexes: Array(firstIndex..<endIndex))
@@ -93,7 +94,7 @@ class PaginationProvider<T: BaseMappable> : NSCopying {
     }
     
     private func getElements(completion: @escaping (ResponseArrayPaginatable<T>?, Error?) -> Void) {
-        networkInstance.loadElements(type: T.self, specificURL: lastPageResponse?.links?.next ?? lastPageResponse?.links?._self, params: params, queryString: queryString, customHeaders: customHeaders) { (response) in
+        networkInstance.loadElements(type: T.self, specificURL: lastPageResponse?.links?.next , params: params, queryString: queryString, customHeaders: customHeaders) { (response) in
             switch response {
             case let .success(result) where result?.data != nil:
                 completion(result, nil)

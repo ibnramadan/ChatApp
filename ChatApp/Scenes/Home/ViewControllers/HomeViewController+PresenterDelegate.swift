@@ -20,7 +20,7 @@ extension HomeViewController : HomeView {
         tableView.reloadData()
     }
     func fetchNewRows(newAvailableIndexes: [Int]){
-     //   tableView.reloadData()
+       // tableView.reloadData()
         self.tableView.insertRows(at: newAvailableIndexes.map({ IndexPath(row: $0, section: 0) }), with: .fade)
     }
     func showError(error: String){

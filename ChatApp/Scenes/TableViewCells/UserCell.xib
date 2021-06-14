@@ -23,8 +23,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9Md-HZ-hRq">
                                 <rect key="frame" x="0.0" y="14" width="89.5" height="32"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-PH-K0F">
-                                        <rect key="frame" x="0.0" y="0.5" width="32" height="31"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GyI-PH-K0F">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="8uG-Bi-VMW"/>
                                             <constraint firstAttribute="width" constant="32" id="xPw-Iw-F7w"/>
@@ -87,7 +87,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -20,7 +20,7 @@ protocol MyFriendsView: AnyObject {
 
 protocol  UserCellView {
     func  displayUserName(name: String)
-    func displayUserImage(URL: String)
+    func displayUserImage(Url: String)
     func setBtnTitle(title : String)
 }
 
@@ -64,7 +64,7 @@ class MyFriendsPresenter {
             cell.displayUserName(name: fullname)
         }
         if let image = object?.img {
-            cell.displayUserImage(URL: image)
+            cell.displayUserImage(Url: image)
         }
         
         cell.setBtnTitle(title : "Start Chat")

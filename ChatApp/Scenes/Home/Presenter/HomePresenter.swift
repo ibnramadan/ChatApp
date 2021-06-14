@@ -50,7 +50,7 @@ class HomePresenter {
             cell.displayUserName(name: fullname)
         }
         if let image = usersProvider.elements[index].img {
-            cell.displayUserImage(URL: image)
+            cell.displayUserImage(Url: image)
         }
         cell.setBtnTitle(title : "Add Friend")
    
